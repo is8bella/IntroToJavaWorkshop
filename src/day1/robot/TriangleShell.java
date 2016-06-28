@@ -2,18 +2,20 @@ package day1.robot;
 
 import org.jointheleague.graphical.robot.Robot;
 
-public class TriangleShell {
+public class TriangleShell 
+{
 
 	// 1. Create a new Robot
-
-	
-	void go() {
+	Robot three = new Robot();
+	void go() 
+	{
 		drawTriangle(100); // 3. delete this line (used only for testing)
-
+		three.penDown();
+		three.setRandomPenColor();
 		// 6. Make the robot go as fast as possible
 
 		// 4. make a variable to hold the length of the triangle and set it to 50
-
+		i
 		// 7. Do the following (up to step 10) 60 times
 
 			// 9. Change the color of the pen to a random color
@@ -27,14 +29,20 @@ public class TriangleShell {
 	}
 
 	/* 2. fill in the method below to draw a triangle. Use the length variable for the size of the triangle. */
-	private void drawTriangle(int length) {
+	private void drawTriangle(int length) 
+	{
 		
-		
+		for (int i = 0; i < 3; i++) 
+		{
+			three.move(100);
+			three.turn(60);
+		}
 		
 	}
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		new TriangleShell().go();
 	}
 }
